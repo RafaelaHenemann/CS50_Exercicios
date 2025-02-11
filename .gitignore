@@ -1,1 +1,8 @@
+# Ignorar a pasta "project"
 project/
+
+# Ignorar arquivo "devcontainer"
+.devcontainer.json
+
+# Ignorar arquivos temporários do VSCode
+.vscode/
