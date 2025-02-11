@@ -1,0 +1,37 @@
+body
+{
+    background-color: rgb(255,255,255);
+}
+
+.notes
+{
+    background-color: rgb(248,248,255);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.centered
+{
+    text-align: center;
+}
+
+h4
+{
+    color: DarkGray;
+}
+
+h3
+{
+    color: Black;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}

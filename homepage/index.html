@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link href="styles.css" rel="stylesheet">
+        <script>
+
+          function blink()
+          {
+            let banner = document.querySelector('#banner');
+                if (banner.style.visibility == 'hidden')
+                {
+                    banner.style.visibility = 'visible';
+                }
+                else
+                {
+                    banner.style.visibility = 'hidden';
+                }
+          }
+
+          window.setInterval(blink, 800);
+
+        </script>
+
+        <title>My Learning Path</title>
+    </head>
+
+    <body>
+        <h1 class="centered">My Learning Path</h1>
+
+        <div class="container">
+          <div id='banner' class="alert alert-secondary" role="alert">
+            Welcome!
+          </div>
+
+        <div class="notes">
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  My Current Courses
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul>
+                        <li><a href='cs50.html' class="link-dark">CS50x - Harvard</a></li>
+                        <li><a href='python-impressionador.html' class="link-dark">Python Impressionador - Hashtag</a></li>
+                        <li><a href='python-iluminado.html' class="link-dark">Python Iluminado - GitHub</a></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  My Future Courses
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ul>
+                        <li>CS50 Python - Harvard</li>
+                        <li>Full-stack Web Development - The Odin Project</li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  About Me
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>Hi, my name is Rafaela Henemann.</strong> I'm 33 years old, married, and the mother of a baby girl. I'm currently a police officer in Brazil and have fallen in love with computer science. I know my age is a little high compared to most students in technology, but I am really interested in learning how to code. My primary goal is to apply this knowledge in my current job and maybe work exclusively in another sector of the force. Everything I have learned so far has been on my own, with no teachers, mentors, or formal schooling. I search, read, practice, and watch courses alone.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
+</html>

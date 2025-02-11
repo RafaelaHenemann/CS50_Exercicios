@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+        <div action="/history" method="get" class="mb-3">
+            <h2>History</h2>
+            {% if history %}
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-start">Date</th>
+                        <th class="text-end">Type</th>
+                        <th class="text-end">Stock</th>
+                        <th class="text-end">Price</th>
+                        <th class="text-end">Shares</th>
+                        <th class="text-end">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in history %}
+                        <tr>
+                            <td class="text-start">{{ row["date"] }}</td>
+                            <td class="text-end">{{ row["type"] }}</td>
+                            <td class="text-end">{{ row["stock"] }}</td>
+                            <td class="text-end">{{ row["price"] | usd }}</td>
+                            <td class="text-end">{{ row["shares"] }}</td>
+                            <td class="text-end">{{ row["total"] | usd }}</td>
+                        </tr>
+                    {% endfor %}
+                    {% else %}
+                    <p>No history yet.</p>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+{% endblock %}

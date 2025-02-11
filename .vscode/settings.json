@@ -1,0 +1,11 @@
+{
+    "gitdoc.enabled": true,
+    "files.associations": {
+        "stdio.h": "c",
+        "type_traits": "c",
+        "numbers": "c",
+        "*.tcc": "c",
+        "string": "c",
+        "string_view": "c"
+    }
+}

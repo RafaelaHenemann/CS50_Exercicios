@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function part1(event){
+                let button = event.target;
+                if (button.innerHTML == 'CS50.ai') {
+                    button.style.backgroundColor = 'Green';
+                    button.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                }
+                else {
+                    button.style.backgroundColor = 'Red';
+                    button.parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+                }
+            }
+
+            function part2(event){
+                let button = event.target;
+                let input = button.parentElement.querySelector('input');
+                if (input.value === 'Duck'){
+                    input.style.backgroundColor = 'Green';
+                    input.parentElement.querySelector('.feedback').innerHTML = 'Correct';
+                }
+                else {
+                    input.style.backgroundColor = 'Red';
+                    input.parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What is the correctly url to the CS50 Artificial Intelligence?</h3>
+                <button onclick="part1(event)">CS50.dev</button> <button onclick="part1(event)">CS50.ai</button> <button onclick="part1(event)">AICS50.com</button>
+                <p class="feedback"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What animal represents the CS50's AI?</h3>
+                <form>
+                    <input autocomplete="off" placeholder="Answer" type="text"></input>
+                    <button onclick="part2(event)">Check Answer</button>
+                    <p class="feedback"></p>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+sort1 uses: Bubble Sort
+
+How do you know?:Performed really well in the sorted case.
+Takes 5.49s to sort reversed list - O(N²)
+Takes 0.02s to sort sorted list - Ω(N)
+
+sort2 uses: Merge Sort
+
+How do you know?: Performed really well in both cases.
+Takes 0.65s to sort reversed list - O(Nlog(N))
+Takes 0.86s to sort sorted list - Ω(Nlog(N))
+
+sort3 uses: Selection Sort
+
+How do you know?: Performed slowly in both cases.
+Takes 3.66s to sort reversed list - O(N²)
+Takes 3.33s to sort sorted list - Ω(N²)

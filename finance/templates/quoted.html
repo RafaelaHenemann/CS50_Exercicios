@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <div class="mb-3">
+            <h2>Stocks</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-start">Symbol</th>
+                        <th class="text-end">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if stocks %}
+                        <tr>
+                            <td class="text-start">{{ stocks["symbol"] }}</td>
+                            <td class="text-end">{{ stocks["price"] | usd }}</td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </form>
+{% endblock %}

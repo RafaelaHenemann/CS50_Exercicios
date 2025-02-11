@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+        <div action="/" method="get" class="mb-3">
+            <h2>Portfolio</h2>
+            {% if portfolio %}
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-start">Stock</th>
+                        <th class="text-end">Shares</th>
+                        <th class="text-end">Price</th>
+                        <th class="text-end">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in portfolio %}
+                        <tr>
+                            <td class="text-start">{{ row["stock"] }}</td>
+                            <td class="text-end">{{ row["shares"] }}</td>
+                            <td class="text-end">{{ row["price"] | usd }}</td>
+                            <td class="text-end">{{ row["total"] | usd }}</td>
+                        </tr>
+                    {% endfor %}
+                    {% else %}
+                    <p>No stocks in your portfolio.</p>
+                    {% endif %}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="border-0 fw-bold text-end" colspan="3">Cash</td>
+                        <td class="border-0 text-end">{{ cash | usd }}</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+{% endblock %}
